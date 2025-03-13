@@ -20,13 +20,6 @@ Utiliza una interfaz enriquecida con **rich** y se encarga de instalar automáti
 ```bash
   python3 --version
 ```
-## Instalación de dependencias
-
-Antes de ejecutar el script, asegúrate de instalar las dependencias necesarias con:
-
-```bash
-pip install -r requirements.txt
-```
 
 ### Docker y Docker Compose
 Para utilizar el archivo generado, asegúrate de tener Docker y Docker Compose instalados.
@@ -46,6 +39,13 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
 
 # 🖥️​ Uso
+
+## Instalación de dependencias
+
+Antes de ejecutar el script, asegúrate de instalar las dependencias necesarias con:
+```bash
+pip install -r requirements.txt
+```
 Para iniciar DockerGen, ejecuta:
 ```bash
 python3 DockerGen.py
