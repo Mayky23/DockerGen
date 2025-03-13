@@ -20,7 +20,15 @@ Utiliza una interfaz enriquecida con **rich** y se encarga de instalar automáti
 ```bash
   python3 --version
 ```
-Docker y Docker Compose
+## Instalación de dependencias
+
+Antes de ejecutar el script, asegúrate de instalar las dependencias necesarias con:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Docker y Docker Compose
 Para utilizar el archivo generado, asegúrate de tener Docker y Docker Compose instalados.
 
 # 🛠️ Instalación

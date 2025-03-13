@@ -3,25 +3,28 @@ import subprocess
 import sys
 import os
 
-def install_and_import(package, module_name=None):
-    """
-    Intenta importar el módulo y, si falla, lo instala usando pip.
-    """
-    if module_name is None:
-        module_name = package
-    try:
-        __import__(module_name)
-    except ImportError:
-        from rich.console import Console
-        Console().print(f"[yellow]Instalando {package}...[/yellow]")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-    finally:
-        globals()[module_name] = __import__(module_name)
+def check_dependencies():
+    required_packages = ["rich", "yaml"]
+    missing_packages = []
 
-# Verificar e instalar las dependencias necesarias: rich y PyYAML.
-install_and_import("rich")
-install_and_import("PyYAML", "yaml")
+    for package in required_packages:
+        try:
+            __import__(package)
+        except ImportError:
+            missing_packages.append(package)
 
+    if missing_packages:
+        print("\n[ERROR] Faltan dependencias necesarias:")
+        for pkg in missing_packages:
+            print(f"  - {pkg}")
+        print("\nPor favor, instala las dependencias con:")
+        print("  pip install -r requirements.txt\n")
+        sys.exit(1)  # Terminar ejecución si faltan paquetes
+
+# Verificar dependencias antes de continuar
+check_dependencies()
+
+# Importar rich y otras librerías
 from rich.console import Console
 from rich.prompt import Prompt, Confirm
 from rich.panel import Panel
