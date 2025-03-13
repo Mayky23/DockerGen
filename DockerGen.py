@@ -21,10 +21,12 @@ def check_dependencies():
         print("  pip install -r requirements.txt\n")
         sys.exit(1)  # Terminar ejecución si faltan paquetes
 
+
 # Verificar dependencias antes de continuar
 check_dependencies()
 
 # Importar rich y otras librerías
+import yaml
 from rich.console import Console
 from rich.prompt import Prompt, Confirm
 from rich.panel import Panel
