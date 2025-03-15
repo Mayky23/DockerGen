@@ -32,7 +32,7 @@ git clone https://github.com/Mayky23/DockerGen.git
 cd DockerGen
 ```
 
-(Opcional) Crea un entorno virtual:
+(Opcional pero recomendado) Crea un entorno virtual:
 ```bash
 python3 -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
