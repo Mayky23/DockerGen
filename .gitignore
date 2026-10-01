@@ -1,1 +1,15 @@
 .qodo
+
+# Entornos virtuales (DockerGen crea .venv si lo necesita)
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archivos generados en la raíz del repositorio
+/docker-compose.yml
+/docker-compose.yaml
+/compose.yml
+/compose.yaml

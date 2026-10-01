@@ -1,2 +1,2 @@
-rich
-PyYAML
+rich>=12.0
+PyYAML>=5.4
