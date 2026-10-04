@@ -76,7 +76,6 @@ El script **no tiene parámetros**: todo se pregunta de forma interactiva. Pulsa
 ## Ejemplo de archivo generado
 
 ```yaml
-# Generado con DockerGen 2.0 - https://github.com/Mayky23/DockerGen
 name: demo
 services:
   web:
